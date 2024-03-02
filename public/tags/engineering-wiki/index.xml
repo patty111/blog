@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Engineering-Wiki on Blog | T.DCR</title>
+    <link>http://localhost:1313/blog/tags/engineering-wiki/</link>
+    <description>Recent content in Engineering-Wiki on Blog | T.DCR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/blog/tags/engineering-wiki/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/posts/q-learning-implementation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/posts/q-learning-implementation/</guid>
+      <description>Base Structure class QLearning: self.n_states = 5 self.action: list of actions self.action_size = len(self.action) self.alpha = 0.1 self.gamma = 0.95 self.epsilon = 1.0 self.epsilon_min = 0.01 self.epsilon_decay = 0.995 self.q_table = pd.DataFrame(np.zeros((self.n_state, self.action_size)), columns=self.action) 基本上n_state一般來說會是1D, 如我在做trading strategy, 設定的state是前n days daily price changes, 就會是一個 n-d array, 就不適用傳統的Q Learning. QValue 計算的方法就需要用如 function approximator (一個neural network).
+Epsilon Greedy 用來決定exploitation or exploration. 隨著epsilon慢慢的decay, agent會用越來越多的exploitation
+def greedy_epsilon(self, state): # exploration if np.random.rand() &amp;lt;= self.epsilon: return np.</description>
+    </item>
+  </channel>
+</rss>

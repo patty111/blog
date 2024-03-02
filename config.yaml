@@ -1,0 +1,82 @@
+baseURL: https://patty111.github.io/blog/
+languageCode: en-us
+title: Blog | T.DCR
+theme: PaperMod
+
+enableEmoji: true
+
+markup:
+  highlight:
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+menus:
+  main:
+    - pageRef: /
+      name: Home
+      url: /
+      weight: 10
+    - pageRef: posts
+      name: Posts
+      url: /posts/
+      weight: 20
+    - pageRef: tags
+      name: Categories
+      url: /tags/
+      weight: 25
+    - pageRef: about
+      name: About
+      url: /about/
+      weight: 30
+    - pageRef: search
+      name: Search
+      url: /search/
+      weight: 40
+
+  footer:
+  - name: Legal
+    pageRef: /legal
+    weight: 10
+  - name: Privacy
+    pageRef: /privacy
+    weight: 20
+    
+
+params:
+  homeInfoParams:
+    Title: Hello There 👋
+    Content: A place where I share my experiences & learnings in tech
+
+  socialIcons: # optional
+    - name: "github"
+      url: "https://github.com/patty111"
+    - name: "linkedin"
+      url: "https://www.linkedin.com/in/patrickcelee"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content", "tags"]
+
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowRelatedPosts: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+# module:
+#   imports:
+#   - path: github.com/hugomods/images

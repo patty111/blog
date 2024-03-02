@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Reinforcement Learning on Blog | T.DCR</title>
+    <link>http://localhost:1313/blog/tags/reinforcement-learning/</link>
+    <description>Recent content in Reinforcement Learning on Blog | T.DCR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 03 Mar 2024 03:00:55 +0800</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/tags/reinforcement-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Q Learning Implementation</title>
+      <link>http://localhost:1313/blog/posts/q-learning-implementation/</link>
+      <pubDate>Sun, 03 Mar 2024 03:00:55 +0800</pubDate>
+      <guid>http://localhost:1313/blog/posts/q-learning-implementation/</guid>
+      <description>Q Learning Basics and Concepts</description>
+    </item>
+  </channel>
+</rss>

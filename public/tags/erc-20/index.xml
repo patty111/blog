@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Erc-20 on Blog | T.DCR</title>
+    <link>http://localhost:1313/blog/tags/erc-20/</link>
+    <description>Recent content in Erc-20 on Blog | T.DCR</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/blog/tags/erc-20/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>http://localhost:1313/blog/erc-20-token-transaction-fetching/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/erc-20-token-transaction-fetching/</guid>
+      <description>Fetching tx data directly from blockchain using block number will return this kind of result, I&amp;rsquo;ll name it &amp;lsquo;dataA&amp;rsquo; for clarification:
+{ &amp;#34;blockHash&amp;#34;: &amp;#34;0x08c18cfe02a25bf726e07da5dc51a4b5da476fe5818fc9fe8ebc54ddde27d69f&amp;#34;, &amp;#34;blockNumber&amp;#34;: &amp;#34;0x12086e3&amp;#34;, &amp;#34;from&amp;#34;: &amp;#34;0x5fff56c053d5428af6c34341535e0f6f9d5ebb4e&amp;#34;, &amp;#34;gas&amp;#34;: &amp;#34;0x9c40&amp;#34;, &amp;#34;gasPrice&amp;#34;: &amp;#34;0x342770c00&amp;#34;, &amp;#34;maxFeePerGas&amp;#34;: &amp;#34;0x342770c00&amp;#34;, &amp;#34;maxPriorityFeePerGas&amp;#34;: &amp;#34;0x77359400&amp;#34;, &amp;#34;hash&amp;#34;: &amp;#34;0x7adc2347f01d052974adf647332c2696d9d5a7f84f1f225284edb5f93c5c00a6&amp;#34;, &amp;#34;input&amp;#34;: &amp;#34;0xa9059cbb000000000000000000000000b8ba36e591facee901ffd3d5d82df491551ad7ef000000000000000000000000000000000000000000000046821749635299f000&amp;#34;, &amp;#34;nonce&amp;#34;: &amp;#34;0x179&amp;#34;, &amp;#34;to&amp;#34;: &amp;#34;0xfc98e825a2264d890f9a1e68ed50e1526abccacd&amp;#34;, &amp;#34;transactionIndex&amp;#34;: &amp;#34;0x3d&amp;#34;, &amp;#34;value&amp;#34;: &amp;#34;0x0&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;0x2&amp;#34;, &amp;#34;accessList&amp;#34;: [], &amp;#34;chainId&amp;#34;: &amp;#34;0x1&amp;#34;, &amp;#34;v&amp;#34;: &amp;#34;0x0&amp;#34;, &amp;#34;r&amp;#34;: &amp;#34;0xf7016189d42aeb0beb537798880730b89d6670b0832256aa4f0ae801728c1d27&amp;#34;, &amp;#34;s&amp;#34;: &amp;#34;0x309ca50e1f8c14b2b449c9dba48d81d3d75c46b3b79261c48fdf684a5127c303&amp;#34;, &amp;#34;yParity&amp;#34;: &amp;#34;0x0&amp;#34; } While downloading csv data directly from etherscan.io will gave this, I&amp;rsquo;ll name it &amp;lsquo;dataB&amp;rsquo; here:</description>
+    </item>
+  </channel>
+</rss>

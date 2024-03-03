@@ -2,15 +2,22 @@ baseURL: https://patty111.github.io/blog/
 languageCode: en-us
 title: Blog | T.DCR
 theme: PaperMod
+paginate: 5
 
+enableInlineShortcodes: true
 enableEmoji: true
+mainsections: ["posts"]
 
 markup:
   highlight:
     noClasses: false
+    lineNos: true
+    guessSyntax: true
+
   goldmark:
     renderer:
       unsafe: true
+
 
 menus:
   main:
@@ -18,12 +25,12 @@ menus:
       name: Home
       url: /
       weight: 10
-    - pageRef: posts
-      name: Posts
-      url: /posts/
+    - pageRef: arcihve
+      name: Archive
+      url: /archive/
       weight: 20
     - pageRef: tags
-      name: Categories
+      name: Tags
       url: /tags/
       weight: 25
     - pageRef: about
@@ -45,15 +52,20 @@ menus:
     
 
 params:
+  math: true
   homeInfoParams:
     Title: Hello There 👋
-    Content: A place where I share my experiences & learnings in tech
+    Content: >
+      A place where I share my experiences & learnings in tech
 
   socialIcons: # optional
     - name: "github"
       url: "https://github.com/patty111"
     - name: "linkedin"
       url: "https://www.linkedin.com/in/patrickcelee"
+  
+  ShowShareButtons: true
+  ShareButtons: ["facebook", "linkedin", "twitter", "reddit"]
 
   fuseOpts:
     isCaseSensitive: false
@@ -70,6 +82,11 @@ params:
   ShowRelatedPosts: true
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
+  ShowPageNums: true
+  ShowAllPagesInArchive: true
+  ShowRssButtonInSectionTermList: true
+  # ShowWordCount: true
+
 
 outputs:
   home:

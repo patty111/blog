@@ -1,10 +1,9 @@
 ---
 title: ERC-20 Token Transaction Fetching
-date: 2024-03-03T03:00:55+08:00
+date: 2024-02-23T03:00:55+08:00
 summary: Decoding tx details, interpreting ERC-20 token tx data from blockchain and etherscan.io
-tags: [
-	"blockchain"
-]
+tags:
+ - blockchain
 
 draft: false
 ---
@@ -46,7 +45,7 @@ Txhash,Blockno,UnixTimestamp,DateTime (UTC),from,From_PrivateTag,to,To_PrivateTa
 ...
 ```
 
-We can observe the 'to' and 'from' in dataA and dataB. The 'from' are the same, representing the  address this transfer request is comming from.
+We can observe the <mark>to</mark> and <mark>from</mark> in dataA and dataB. The 'from' are the same, representing the  address this transfer request is comming from.
 
 However, the 'to' are not the same.
 

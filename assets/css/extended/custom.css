@@ -1,0 +1,13 @@
+.image-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-row .figure {
+    flex: 1 0 auto;
+    text-align: center;
+}
+
+figcaption.caption {
+    text-align: center;
+}

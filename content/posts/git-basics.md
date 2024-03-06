@@ -48,7 +48,7 @@ commit 類似把跟你確認好的操作寫到歷史紀錄裡。
 `git commit -m "You Commit Msg"`
 
 #### 6. 把你的本地repo與github repo做連結
-如果你的repo是clone下來的就跳過這個步驟。
+如果你的repo是clone下來的就跳過這個步驟  
 `git remote add origin <your-github-repo-url>`
 #### 7. 把本地repo同步到github repo
 第一次`git push -u origin main`，之後用`git push`就可以了。  
@@ -98,6 +98,10 @@ Date:   Thu Mar 7 00:16:12 2024 +0800
 ```
 你知道我在哪一次commit裡面寫了a.py來印出hello world嗎?這還是專案不大的時候，像是下面這個專案有上百條commit還有5個branch，不好好寫commit message絕對搞死你:
 ![alt text](../images/commit-example.png)
+好好寫commit message是不是就能大概知道每個commit在做什麼~  
+
+---
+
 通常在開源專案或是企業內部會有自己一套的規則，而比較通用、書中可能會出現的就是Conventional Commit
 ```
 # good commit message:
@@ -133,7 +137,7 @@ git commit -m "chore[package.json]: Install Vant UI Components"
 
 [optional footer(s)]
 ```
-這個時候就不能用`git commit -m ...`, 用`git commit`指令就可以了。git會自動打開預設的文字編輯器。  
+這個時候就不能用`git commit -m "your msg"`, 用`git commit`指令就可以了。git會自動打開預設的文字編輯器。  
 要改動預設編輯器可以使用以下指令:  
 `git config --global core.editor <your-preferred-editor>`  
 
@@ -170,7 +174,7 @@ git ac "commit msg"
 	longpaths = true
 [alias]
 	nah = "!f() { git reset --hard; git clean -df; if [ -d \".git/rebase-apply\" ] || [ -d \".git/rebase-merge\" ]; then git rebase --abort; fi; }; f"
-    ac = '!f() { git add . && git commit -m "$1"; }; f'
+	ac = '!f() { git add . && git commit -m "$1"; }; f'
 ```
 
 

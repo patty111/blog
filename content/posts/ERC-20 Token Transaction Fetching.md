@@ -8,7 +8,7 @@ tags:
 draft: false
 ---
 
-Fetching tx data directly from blockchain using block number will return this kind of result, I'll name it 'dataA' for clarification:
+Fetching tx data directly from blockchain using block number will return the following result, which I'll refer to ass 'dataA' for clarity:
 
 ```json
 {
@@ -35,7 +35,7 @@ Fetching tx data directly from blockchain using block number will return this ki
 }
 ```
 
-While downloading csv data directly from etherscan.io will gave this, I'll name it 'dataB' here:
+While downloading csv data directly from etherscan.io will yield the following, which I'll refer to as 'dataB':
 
 ```python
 Txhash,Blockno,UnixTimestamp,DateTime (UTC),from,From_PrivateTag,to,To_PrivateTag,Quantity,Method
@@ -45,12 +45,12 @@ Txhash,Blockno,UnixTimestamp,DateTime (UTC),from,From_PrivateTag,to,To_PrivateTa
 ...
 ```
 
-We can observe the <mark>to</mark> and <mark>from</mark> in dataA and dataB. The 'from' are the same, representing the  address this transfer request is comming from.
+We can compare the <mark>to</mark> and <mark>from</mark> in dataA and dataB. The 'from' fields are the same, representing the address from which this transfer request originated.
 
-However, the 'to' are not the same.
+However, the 'to' fields are not quite the same.
 
-In dataA it is `0xfc98e825a2264d890f9a1e68ed50e1526abccacd`, this is the MCO2 Token address, meaning we are interacting with MCO2. 
-In dataB it is `0xb8ba36e591facee901ffd3d5d82df491551ad7ef`, the target address of this transfer, but where does this target go when we directly fetched the data from the blockchain(dataA)?
+In dataA it is `0xfc98e825a2264d890f9a1e68ed50e1526abccacd`, this is the MCO2 Token address, indicating we are interacting with MCO2. 
+In dataB it is `0xb8ba36e591facee901ffd3d5d82df491551ad7ef`, the target address of this transfer. But where does this target go when we directly fetched the data from the blockchain(dataA)?
 
 The 'input field' of raw tx data from blockchain conatains the encoded function call. After parsing it we can interpret the following information:
 

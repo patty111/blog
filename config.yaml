@@ -4,6 +4,9 @@ title: Blog | T.DCR
 theme: PaperMod
 paginate: 5
 
+googleAnalytics: "G-M8GBD6H8HF"
+
+
 enableInlineShortcodes: true
 enableEmoji: true
 mainsections: ["posts"]

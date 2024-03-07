@@ -26,6 +26,7 @@ echo '[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zsh
 echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 ```
 > Refer to [this](https://arc.net/l/quote/gtbqrdas) for detail setup on fish shell or bash    
+
 Restart your shell to let the settings take effect  
 ```shell
 exec $SHELL

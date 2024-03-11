@@ -20,13 +20,13 @@ Here are the types of cells:
 5. '*' cells, KABOOM! You stepped on a mine and game over.
 
 <div class="image-row">
-{{<figure src="../images/minemap1.png" >}}
-{{<figure src="../images/minemap2.png" >}}
+{{<figure src="../../images/minemap1.png" >}}
+{{<figure src="../../images/minemap2.png" >}}
 </div>
 
 <div class="image-row">
-{{<figure src="../images/minemap3.png" >}}
-{{<figure src="../images/minemap4.png" >}}
+{{<figure src="../../images/minemap3.png" >}}
+{{<figure src="../../images/minemap4.png" >}}
 </div>
 
 
@@ -34,7 +34,7 @@ When the difficulty sets and the game initializes, the program randomly places t
 
 For the color output and some other commands, I referred to [this](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797).
 
-{{<figure src="../images/minesweeper_color.png" attr="Minesweeper number color">}}
+{{<figure src="../../images/minesweeper_color.png" attr="Minesweeper number color">}}
 
 
 <!-- ![alt text](../images/minesweeper_color.png) -->

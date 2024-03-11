@@ -1,6 +1,6 @@
 ---
 title: "Git Basics and Conventional Commits"
-date: 2024-03-06T23:06:40+08:00
+date: 2023-05-26T23:06:40+08:00
 tags:
  - git
 draft: false
@@ -11,7 +11,7 @@ Github簡單來說是一個線上原始碼存放的平台。Git 則是一個版�
 
 <!--more-->
 ### Why Git?
-Git可以做分散式的版本控制，對程式歷史紀錄追蹤、多人協作等狀況有很大的幫助。基本上我覺得任何程式只要你把它當作專案來看就應該要做版控，更何況是多人專案。手動merge或是歷史追蹤回檔真的不是人幹的。Git是不論寫程式或是想當工程師必學的一個工具，雖然指令多且複雜，好處是平常多只需要少部分的內容就能應付大部分情況。
+Git可以做分散式的版本控制，對程式歷史紀錄追蹤、多人協作等狀況有很大的幫助。基本上我覺得任何程式只要你把它當作專案來看就應該要做版控，更何況是多人專案。手動merge或是歷史追蹤回檔真的不是人幹的。Git是不論寫程式或是想當工程師必學的一個工具，雖然指令多且複雜，但平常只需少部分內容就能應付大部分情況。
 
 ### How to Use Git?
 以下我都以git整合github為前提:
@@ -34,18 +34,18 @@ git init
 ```bash
 git clone <your-target-repo-url>.git
 ```
-第一次clone下來之後要再次同步:
+第一次clone下來之後如果需要再次同步:
 ```bash
 git pull
 ```
 #### 3. 對你的專案做操作
 #### 4. Stage你的操作
 Stage有點像是git在跟你做確認要把哪些事件寫到歷史紀錄裡面，以檔案為單位。  
-Stage全部修改到的檔案: `git add .`
+Stage全部修改到的檔案: `git add .`  
 Stage特定幾個檔案，如果加了a.cpp, b.cpp和 b.js，只想stage .cpp files: `git add a.cpp b.cpp`  
 #### 5. Commit
 commit 類似把跟你確認好的操作寫到歷史紀錄裡。  
-`git commit -m "You Commit Msg"`
+`git commit -m "Your Commit Msg"`
 
 #### 6. 把你的本地repo與github repo做連結
 如果你的repo是clone下來的就跳過這個步驟  
@@ -79,6 +79,32 @@ git merge dev
 ```
 merging的行為會成為一個新的commit。有時候會碰到merge conflict的狀況，這個時候就需要先resolve conflict才能continue merge。
 
+### Cherry Pick
+有時候我們只有一部分的改動想合併到主branch中，這時cherry-pick就會派上用場。  
+現在假設一個情境，我在dev branch做了好幾個新功能，但是都還沒有完成，還不能合進main branch，同時我的main branch還沒有寫README但在dev branch已經寫好了。
+我想做的事是讓main branch也有README:
+1. 先取得新增README的commit的commit hash
+```shell
+git log
+# or 
+git log --pretty=oneline
+
+# output
+bea5a29144809fbcd7e54f3cb1451b0bcf147e1d (HEAD -> dev, origin/dev) docs[README]: add instructions for "getting started"
+2b9db2d0c04f03e70b65efaff6948b493b2492a6 Add/Moidyf models and schemas for votes, roles, and tickets
+...
+6b36907829f8864e190ffb323e7d06fc94078eba build: downgrade python required version and update gitignore
+```
+2. 我們要的commit hash 是 `bea5a29144809fbcd7e54f3cb1451b0bcf147e1d`，要把它pick進main branch
+```shell
+git checkout main
+git cherry-pick bea5a29144809fbcd7e54f3cb1451b0bcf147e1d
+```
+
+cherry-pick後的git graph範例
+![cherry-pick](../../images/cherry-pick.png)
+
+
 ### Conventional Commits
 前面在做git commit的時候需要留下一段話，通常用於記錄這次的commit做了甚麼事。有些人會因為偷懶亂寫如 `git commit -m "."`等等。    
 我們來看看以下的git log:
@@ -97,7 +123,7 @@ Date:   Thu Mar 7 00:16:12 2024 +0800
     haha
 ```
 你知道我在哪一次commit裡面寫了a.py來印出hello world嗎?這還是專案不大的時候，像是下面這個專案有上百條commit還有5個branch，不好好寫commit message絕對搞死你:
-![alt text](../images/commit-example.png)
+![alt text](../../images/commit-example.png)
 好好寫commit message是不是就能大概知道每個commit在做什麼~  
 
 ---
@@ -144,7 +170,7 @@ git commit -m "chore[package.json]: Install Vant UI Components"
 ### Tools and Tips
 #### Git Graph
 如果你的編輯器使用的是vscode推薦git graph這個套件，他可以視覺化git的歷史紀錄，方便追蹤，超級方便。  
-![git graph](../images/git-graph.png)
+![git graph](../../images/git-graph.png)
 #### Git Alias
 有些日常常用的指令組合如
 ```shell

@@ -9,7 +9,7 @@ googleAnalytics: "G-M8GBD6H8HF"
 
 enableInlineShortcodes: true
 enableEmoji: true
-mainsections: ["posts"]
+mainsections: ["posts", "conference", "leetcode"]
 
 markup:
   highlight:
@@ -36,10 +36,10 @@ menus:
       name: Tags
       url: /tags/
       weight: 25
-    - pageRef: about
-      name: About
-      url: /about/
-      weight: 30
+    # - pageRef: about
+    #   name: About
+    #   url: /about/
+    #   weight: 30
     - pageRef: search
       name: Search
       url: /search/

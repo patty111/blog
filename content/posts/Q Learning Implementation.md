@@ -58,7 +58,7 @@ def greedy_epsilon(self, state):
 
 ### Bellman Equation
 Updating Q table base on immediate reward and estimates future reward
-![](../images/qvalue.png)  
+![](../../images/qvalue.png)  
 
 $$
 Q(s, a) \gets Q(s, a) + \alpha[r + \gamma max_{a^{\prime}} Q(s^{\prime}, a^{\prime}) - Q(s, a)]

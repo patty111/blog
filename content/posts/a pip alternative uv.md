@@ -1,5 +1,5 @@
 ---
-title: "UV - a   Pip Alternative"
+title: "UV - A Pip Alternative"
 date: 2024-04-10T19:19:02+08:00
 tags:
  - python

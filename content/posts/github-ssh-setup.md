@@ -4,6 +4,7 @@ date: 2024-08-10T16:44:57+08:00
 tags:
  - github
  - ssh
+ - setup
 draft: false
 ---
 Setup Authentication with Github using SSH, github username/password authentication is deprecated.

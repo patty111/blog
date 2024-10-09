@@ -80,9 +80,9 @@ pub fn transfer(
     amount: u64,
 ) 
 ```
-但是我們無法保證第24行token_program的Account在傳入時真的是SPL Token的帳戶地址​。避免利用這個漏洞的攻擊發生開發者應該加一段針對地址正確性的檢查動作。
+但是我們無法保證第24行 `token_program` 的 Account 在傳入時真的是 SPL Token 的帳戶地址​。避免利用這個漏洞的攻擊發生開發者應該加一段針對地址正確性的檢查動作。
 
-讀者可以在這一個commit中看到commiter新增了spl-token program id 檢查 -- 一個check_program_account() 函式來確保Program ID真的代表使用者預期呼叫的Program。
+讀者可以在這一個[commit](https://github.com/solana-labs/solana-program-library/commit/58221fc9ae05e258ee903b49c5e8f5abbeb7796c)中看到commiter新增了 spl-token program id 檢查 -- 一個`check_program_account()` 函式來確保 Program ID 真的代表使用者預期呼叫的Program。
 
 ## Reference
 - [CPI Guard實作提議原始討論串](https://github.com/solana-labs/solana-program-library/issues/3694)

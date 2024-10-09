@@ -10,6 +10,7 @@ tags:
 draft: false
 ---
 > [Original Post for Solana Writeathon](https://vocus.cc/article/66afe9e6fd897800017851b4)
+
 CPI 全名叫做 Cross Program Invocation，它可以讓Solana的program直接呼叫另一個Program中的instruction，這個功能可以讓程式有更高的可組合性。可以把CPI想像成一個API在被呼叫的時候又去呼叫另外一個API。
 
 ![alt text](../../images/cross-program-invocation-graph.png)

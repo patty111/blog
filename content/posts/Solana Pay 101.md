@@ -27,7 +27,7 @@ Solana本身也支援智能合約。Solana Pay除了單純的transfer request還
 
 ### Intro to Solana Pay API
 在開始寫程式之前我們需要準備兩個錢包地址用於模擬收發代幣，這邊我用的是phantom wallet。接下來的模擬會在Solana devnet（測試網路）上進行，可以前往wallet中的 設定>開發人員設定>測試網模式 開啟選項。
-![alt text](../../phantom-wallet-pic.png)
+![alt text](../../images/phantom-wallet-pic.png)
 
 要匯入模擬用的Solana代幣可以在網路上尋找 Solana faucet
 ### Dependencies

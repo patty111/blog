@@ -28,7 +28,7 @@ The `channel access token` can be found in the
 [LINE Developer Console](https://developers.line.biz/en/) > Console Home > Your Channel(needs to be Messaging API) > Messaging API  
 
 and scroll to the bottom
-![alt text](../../images/LINE-Bot-channel_access_token.png)
+![alt text](../../images/LINE-bot-channel_access_token.png)
 
 #### ChatID
 The `chatID` is in fact the userID. When someone sends a message to your LINE Official Account, LINE sends the webhook to your bot server. The ID is included in the webhook payload.

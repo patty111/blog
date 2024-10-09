@@ -8,6 +8,8 @@ tags:
  - XueDAO
 draft: false
 ---
+> [Original Post for Solana Writeathon](https://vocus.cc/article/66a77c35fd89780001b00167)  
+
 ### Solana是什麼碗糕?
 Solana 是一個由Solana Labs於2020推出的區塊鏈網路, 採用PoS與PoH機制，與ETH、BTC相比有著更高的效能與交易頻率，更低的能耗與手續費。
 ![alt text](../../images/blockchain-network-comparison.png)

@@ -1,4 +1,4 @@
-baseURL: https://patty111.github.io/blog/
+baseURL: https://patty111.github.io/blog
 languageCode: en-us
 title: Blog | T.DCR
 theme: PaperMod
@@ -6,6 +6,7 @@ paginate: 5
 
 googleAnalytics: "G-M8GBD6H8HF"
 
+description: "A place where I share my experiences & learnings in tech"
 
 hasCJKLanguage: true # for chinese, japanese, korean correct word counting, but enabling this messes up the word count for english
 enableInlineShortcodes: true
@@ -97,6 +98,12 @@ outputs:
     - HTML
     - RSS
     - JSON # necessary for search
+    - Sitemap
+
+sitemap:
+  changefreq: "weekly"
+  priority: 0.5
+  filename: "sitemap.xml"
 
 # module:
 #   imports:

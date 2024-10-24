@@ -2,7 +2,9 @@ baseURL: https://patty111.github.io/blog
 languageCode: en-us
 title: Blog | T.DCR
 theme: PaperMod
-paginate: 5
+
+pagination:
+  pagerSize: 5
 
 googleAnalytics: "G-M8GBD6H8HF"
 

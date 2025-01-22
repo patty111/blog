@@ -23,7 +23,9 @@ This is what a FastAPI app using Gunicorn managing Uvicorn workers may look like
 ### WSGI & ASGI
 WSGI stands for **Web Server Gateway Interface**, it is a standard interface between web servers and Python web apps or frameworks. WSGI can handle synchronous code, establishing short-lived connections, such as HTTP requests.
 
-ASGI stands for **Asynchronous Server Gateway Interface**, it is also a standard interface between web servers and Python web applications or frameworks. ASGI can handle asynchronous code, establishing long lived connections, such as WebSockets, HTTP/2 reequests.  
+ASGI stands for **Asynchronous Server Gateway Interface**, it is also a standard interface between web servers and Python web applications or frameworks. ASGI can handle asynchronous code, establishing long lived connections, such as WebSockets, HTTP/2 requests.  
+
+![alt text](../../images/.png)
 
 ### Gunicorn
 Gunicorn is a Python WSGI HTTP Server, it creates a main process that manages a set of worker processes. You can run Gunicorn with a FastAPI app, and Gunicorn will manage the FastAPI app in multiple worker processes. Every process will be running its own ASGI server(single threaded). By doing this, your app can handle multiple requests simultaneously. Gunicorn will do the load balancing automatically.

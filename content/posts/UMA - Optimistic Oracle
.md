@@ -10,13 +10,14 @@ tags:
  - game-theory
  - uma
 draft: false
+summary: "An intro to UMA's Optimistic Oracle."
 ---
 > First Introduced by @JackChai - XueDAO Core Contributor
 
 ## 特點
 	- 是一個樂觀預言機、爭議裁決系統
 	- 不像傳統預言機只是餵價(Chainlink), 適用於所有 off-chain Data
-	- Schellling-point [謝林點](https://www.google.com/search?q=schelling+point&oq=schelling+point&sourceid=chrome&ie=UTF-8) based blockchain oracles
+	- Schellling-point(謝林點) based blockchain oracles
 目前主要其他協議是整合 Optimistic Oracle V3
 	- 有整合的有: *Cross Chain bridges*, 保險, 預測市場, customizable DAO tooling
 參與者
@@ -33,9 +34,9 @@ draft: false
 4. If no dispute is made during this period, the assertion will be consider true
 5. The statements are Binary (T/F), not only about prices
 6. *Secured By UMA Token Staker -> Secured by economic incentive (經濟激勵)*
-![](../../content/images/uma%20cycle.png)
-#### Problem
-Secured by economic incentives -> **We cannot secure a Market/Protocol That has a Higher Value then Itself** -> We secure 1000\$ using 100\$, if I stoled 1000\$ but only lost 100\$ -> Still make a profit 
+![](../../images/uma%20cycle.png)
+## Problem
+Secured by economic incentives -> **We cannot secure a Market/Protocol That has a Higher Value then Itself** -> We secure 1000\$ using 100\$, if I stoled 1000\$ but only lost 100\$ -> Still make a profit  
 e.g. PolyMarket now has a market cap of 200M -> PolyMarket got a higher Market Cap and UMA's value  dropped -> compromising UMA can get profit
 
 *-> UMA oracle is established around the 51% mechanism, namely to attack the oracle we need to launch a 51% attack -> As mentioned above, cannot protect a market that has a higher value then UMA*
@@ -44,13 +45,10 @@ e.g. PolyMarket now has a market cap of 200M -> PolyMarket got a higher Market C
 
 
 
- 
-![[Pasted image 20250413011510.png]]
-
 #### Optimistic Oracle and Bridge
 
 
 #### Optimistic Oracle V2 vs V3
 [link](https://x.com/pumpedlunch/status/1705273519683358932)
 
-![uma oov2 vs oov3](../../content/images/UMA%20oov2%20vs%20oov3.png)
+![uma oov2 vs oov3](../../images/UMA%20oov2%20vs%20oov3.png)

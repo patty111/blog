@@ -1,6 +1,5 @@
 ---
-title: "UMA   Optimistic Oracle
-"
+title: "UMA - Optimistic Oracle"
 date: 2025-04-14T16:20:14+08:00
 tags:
  - ETH
@@ -10,45 +9,64 @@ tags:
  - game-theory
  - uma
 draft: false
-summary: "An intro to UMA's Optimistic Oracle."
+summary: "An introduction to UMA's Optimistic Oracle and how it works."
 ---
-> First Introduced by @JackChai - XueDAO Core Contributor
 
-## 特點
-	- 是一個樂觀預言機、爭議裁決系統
-	- 不像傳統預言機只是餵價(Chainlink), 適用於所有 off-chain Data
-	- Schellling-point(謝林點) based blockchain oracles
-目前主要其他協議是整合 Optimistic Oracle V3
-	- 有整合的有: *Cross Chain bridges*, 保險, 預測市場, customizable DAO tooling
-參與者
-	- requesters
-	- proposers (Asseter)
-	- disputes
-	- Voters
+> First introduced to me by @JackChai - XueDAO Core Contributor
+
+## What is UMA's Optimistic Oracle?
+
+UMA's Optimistic Oracle is a dispute resolution system that operates on the principle of optimism - assuming all participants act honestly by default. Unlike traditional oracles like Chainlink that primarily feed price data, UMA's solution can handle any off-chain data through a Schelling-point based oracle mechanism.
+
+## Key Features
+
+- Functions as both an optimistic oracle and a dispute resolution system
+- Works with all types of off-chain data, not just price feeds
+- Based on Schelling-point game theory for blockchain oracles
+- Currently integrated with various protocols through Optimistic Oracle V3
+
+### Main Integration Areas
+- Cross-chain bridges
+- Insurance protocols
+- Prediction markets
+- Customizable DAO tooling
+
+## Participants in the System
+
+- **Requesters**: Entities that need off-chain data verified on-chain
+- **Proposers (Asserters)**: Provide data assertions and post bonds
+- **Disputers**: Challenge assertions they believe are incorrect
+- **Voters**: UMA token holders who validate disputes
 
 ---
+
 ## How Does it Work?
-1. 是Optimistic, 就如 Optimistic Rollup, 預設大家都是好人。Verified via a Dispute Period. Anybody can start a dispute.
-2. Asserter provides data/assert and 保證金
-3. When a dispute is made, send the dispute to UMA's DVM(Data Verification Mechanism), UMA Token Holders will vote to validate the dispute
-4. If no dispute is made during this period, the assertion will be consider true
-5. The statements are Binary (T/F), not only about prices
-6. *Secured By UMA Token Staker -> Secured by economic incentive (經濟激勵)*
-![](../../images/uma%20cycle.png)
-## Problem
-Secured by economic incentives -> **We cannot secure a Market/Protocol That has a Higher Value then Itself** -> We secure 1000\$ using 100\$, if I stoled 1000\$ but only lost 100\$ -> Still make a profit  
-e.g. PolyMarket now has a market cap of 200M -> PolyMarket got a higher Market Cap and UMA's value  dropped -> compromising UMA can get profit
 
-*-> UMA oracle is established around the 51% mechanism, namely to attack the oracle we need to launch a 51% attack -> As mentioned above, cannot protect a market that has a higher value then UMA*
+1. **Optimistic by Default**: Similar to Optimistic Rollups, the system assumes good behavior. Assertions are verified through a dispute period.
+2. **Assertion Process**: An asserter provides data/assertions with a bond (collateral).
+3. **Dispute Resolution**: If challenged, disputes are sent to UMA's Data Verification Mechanism (DVM), where UMA token holders vote to validate.
+4. **Validation Period**: If no dispute occurs during the specified period, the assertion is considered true.
+5. **Binary Outcomes**: Statements are binary (True/False), not limited to price data.
+6. **Security Model**: Secured by economic incentives through UMA token stakers.
 
-@Jack Chai: Potential Solution? -> Restaking, 靜默成長，可以重複利用流動性, TVL(Total Value Locked) 可以翻倍成長
+![UMA Optimistic Oracle Cycle](/images/uma-cycle.png)
 
+## Security Challenges
 
+The main challenge with UMA's security model is that it relies on economic incentives, creating a fundamental limitation:
 
-#### Optimistic Oracle and Bridge
+**"We cannot secure a market/protocol that has a higher value than the oracle system itself."**
 
+For example:
+- If we secure \$1000 using a \$100 bond, an attacker could steal \$1000, forfeit the \$100 bond, and still profit \$900
+- If a protocol like PolyMarket has a market cap of $200M that exceeds UMA's value, compromising UMA could be profitable
 
-#### Optimistic Oracle V2 vs V3
-[link](https://x.com/pumpedlunch/status/1705273519683358932)
+UMA's oracle operates on a 51% consensus mechanism - meaning an attacker would need to control 51% of tokens to attack the system. This becomes problematic when securing higher-value protocols.
 
-![uma oov2 vs oov3](../../images/UMA%20oov2%20vs%20oov3.png)
+### Potential Solution
+
+@Jack: **Restaking** could allow for "silent growth" by reusing liquidity, potentially multiplying the Total Value Locked (TVL) and strengthening security.
+
+## Optimistic Oracle V2 vs V3
+
+![UMA OO V2 vs OO V3](/images/UMA-oov2-vs-oov3.png)

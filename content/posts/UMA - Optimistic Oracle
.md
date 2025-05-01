@@ -12,7 +12,7 @@ draft: false
 summary: "An introduction to UMA's Optimistic Oracle and how it works."
 ---
 
-> First introduced to me by @JackChai - XueDAO Core Contributor
+> First introduced to me by @Jack - XueDAO Core Contributor
 
 ## What is UMA's Optimistic Oracle?
 
@@ -49,7 +49,7 @@ UMA's Optimistic Oracle is a dispute resolution system that operates on the prin
 5. **Binary Outcomes**: Statements are binary (True/False), not limited to price data.
 6. **Security Model**: Secured by economic incentives through UMA token stakers.
 
-![UMA Optimistic Oracle Cycle](/images/uma-cycle.png)
+![UMA Optimistic Oracle Cycle](../../images/uma%20cycle.png)
 
 ## Security Challenges
 
@@ -58,7 +58,7 @@ The main challenge with UMA's security model is that it relies on economic incen
 **"We cannot secure a market/protocol that has a higher value than the oracle system itself."**
 
 For example:
-- If we secure \$1000 using a \$100 bond, an attacker could steal \$1000, forfeit the \$100 bond, and still profit \$900
+- If we secure \$ 1000 using a \$100 bond, an attacker could steal \$1000, forfeit the \$100 bond, and still profit \$900
 - If a protocol like PolyMarket has a market cap of $200M that exceeds UMA's value, compromising UMA could be profitable
 
 UMA's oracle operates on a 51% consensus mechanism - meaning an attacker would need to control 51% of tokens to attack the system. This becomes problematic when securing higher-value protocols.
@@ -69,4 +69,4 @@ UMA's oracle operates on a 51% consensus mechanism - meaning an attacker would n
 
 ## Optimistic Oracle V2 vs V3
 
-![UMA OO V2 vs OO V3](/images/UMA-oov2-vs-oov3.png)
+![UMA OO V2 vs OO V3](../../images/UMA%20oov2%20vs%20oov3.png)

@@ -7,7 +7,7 @@ tags:
  - CPI
  - TokenExtensionProgram
  - XueDAO
-draft: false
+draft: true
 ---
 > [Original Post for Solana Writeathon](https://vocus.cc/article/66afe9e6fd897800017851b4)
 
